@@ -4,7 +4,7 @@
 - 🌱 I’m currently learning MLIR
 - 💞️ I’m looking to collaborate on any open source project
 
-[![Serge45's GitHub stats](https://github-readme-stats.vercel.app/api?username=Serge45&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![Serge45's GitHub stats](https://github-stats-extended.vercel.app/api?username=Serge45&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
 <!---
 Serge45/Serge45 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
