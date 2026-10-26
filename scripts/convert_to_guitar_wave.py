@@ -1,9 +1,18 @@
+import os
 import re
 import sys
 import base64
 import math
 
 def convert_snake_to_guitar_wave(snake_svg_path, char_img_path, output_svg_path, theme='dark'):
+    if not os.path.exists(snake_svg_path):
+        raise FileNotFoundError(f"Source snake svg not found: {snake_svg_path}")
+    if not os.path.exists(char_img_path):
+        raise FileNotFoundError(f"Character image not found: {char_img_path}")
+
+    print(f"Reading {snake_svg_path} ({os.path.getsize(snake_svg_path)} bytes)...")
+    print(f"Reading {char_img_path} ({os.path.getsize(char_img_path)} bytes)...")
+
     with open(snake_svg_path, 'r', encoding='utf-8') as f:
         svg_content = f.read()
 
@@ -205,9 +214,10 @@ def convert_snake_to_guitar_wave(snake_svg_path, char_img_path, output_svg_path,
   </g>
 </svg>''')
 
+    os.makedirs(os.path.dirname(os.path.abspath(output_svg_path)), exist_ok=True)
     with open(output_svg_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(svg))
-    print(f"Successfully converted {snake_svg_path} -> {output_svg_path} (Colored tiles: {colored_count})")
+    print(f"Successfully converted {snake_svg_path} -> {output_svg_path} (Colored tiles: {colored_count}, output size: {os.path.getsize(output_svg_path)} bytes)")
 
 if __name__ == '__main__':
     if len(sys.argv) >= 5:

@@ -36,8 +36,11 @@ jobs:
       - name: Transform into Guitar Soundwave Grid
         run: |
           echo "Transforming into Clean Guitar Soundwave Visualizer with Live2D Character..."
+          sudo chown -R $USER:$USER dist || true
+          ls -la dist
           python3 scripts/convert_to_guitar_wave.py dist/github-contribution-grid-snake.svg assets/char_retina.webp dist/github-contribution-grid-snake.svg light
           python3 scripts/convert_to_guitar_wave.py dist/github-contribution-grid-snake-dark.svg assets/char_retina.webp dist/github-contribution-grid-snake-dark.svg dark
+          ls -la dist
 
       - name: Push to the output branch
         uses: crazy-max/ghaction-github-pages@v4
