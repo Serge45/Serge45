@@ -1,7 +1,7 @@
 import re
 import sys
 import base64
-import numpy as np
+import math
 
 def convert_snake_to_guitar_wave(snake_svg_path, char_img_path, output_svg_path, theme='dark'):
     with open(snake_svg_path, 'r', encoding='utf-8') as f:
@@ -186,7 +186,7 @@ def convert_snake_to_guitar_wave(snake_svg_path, char_img_path, output_svg_path,
     x_start = -320
     x_end = 1280
     for x in range(x_start, x_end + 1, 4):
-        y = 56.0 + 6.0 * np.sin((x / 160.0) * 2.0 * np.pi)
+        y = 56.0 + 6.0 * math.sin((x / 160.0) * 2.0 * math.pi)
         if x == x_start:
             wave_path.append(f"M {x:.1f},{y:.1f}")
         else:
