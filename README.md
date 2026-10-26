@@ -26,7 +26,7 @@ Passionate about low-level systems, GPU microarchitecture, and audio computing. 
 - 🛠 **Compilers & Intermediate Representation**
   - Exploring MLIR / LLVM compiler infrastructure, dialect design, and hardware-targeted lowering passes.
 - 🎸 **Audio DSP & Creative Coding**
-  - Avid guitarist and music tech enthusiast with hands-on experience in CoreAudio (`AUAudioUnit`), JUCE C++ framework, and real-time MIDI streaming.
+  - Hobbyist guitarist and music tech enthusiast with hands-on experience in CoreAudio (`AUAudioUnit`), JUCE C++ framework, and real-time MIDI streaming.
 - 🖥 **Systems & Visualization**
   - Proficient in Modern C++ (C++17/20), Qt-based cross-platform GUI/tooling, and Python automation workflows.
 
